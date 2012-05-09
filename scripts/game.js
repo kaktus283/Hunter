@@ -1,6 +1,6 @@
 var a = 0;
 var b = 0;
-var version = 'Developer Preview 0.3.6';
+var version = 'Developer Preview 0.3.8';
 function addMonster (value) {
   for(var i = 1; i <= value; i++) {
     monster = document.createElement('div');
@@ -24,7 +24,7 @@ function addPoints ( ) {
   score = parseInt(document.getElementById("points").innerHTML);
   level = document.getElementById("level").innerHTML;
   points = score + 1;
-	if(points%(points/2) == 0) { // co 100 zabitych nowy level, mozna potem nieregularnie dac
+	if(points%(points/2) == 0) {
 		levelUp(parseInt(level) + 1);
 	}
   document.getElementById('points').innerHTML = points;
@@ -32,4 +32,21 @@ function addPoints ( ) {
 function levelUp (num) {
 	document.getElementById('level').innerHTML = num;
   addMonster(1);
+}
+/* Sample achievment system */
+function achievment( level, points ) {
+  if( points >= 100 ) {
+    //Killer I
+  } else if( points >= 200 ) {
+    //Killer II
+  } else if( points >= 300 ) {
+    //Killer III
+  }
+  if( level >= 1) {
+    //Farmer I
+  } else if( level >= 2 ) {
+    //Farmer II
+  } else if( level >= 3 ) {
+    //Farmer III
+  }
 }
