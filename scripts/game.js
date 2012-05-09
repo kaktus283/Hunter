@@ -1,6 +1,6 @@
 var a = 0;
 var b = 0;
-var version = 'Developer Preview 0.3.5';
+var version = 'Developer Preview 0.3.6';
 function addMonster (value) {
   for(var i = 1; i <= value; i++) {
     monster = document.createElement('div');
@@ -23,12 +23,17 @@ function remove ( id ) {
 function addPoints ( ) {
   score = parseInt(document.getElementById("points").innerHTML);
   level = document.getElementById("level").innerHTML;
+<<<<<<< HEAD
   points = score + 10;
   if(points == 10 || points == 20 || points == 30) {
     addMonster(1);
     
   }
 	if(points%100 == 0){ // co 100 zabitych nowy level, mozna potem nieregularnie dac
+=======
+  points = score + 1;
+	if(points % 2 == 0) { // co 100 zabitych nowy level, mozna potem nieregularnie dac
+>>>>>>> cafc5bce54b49debc37297c5ecd1eb6eddf46f2a
 		levelUp(parseInt(level) + 1);
 	}
   document.getElementById('points').innerHTML = points;
@@ -36,6 +41,10 @@ function addPoints ( ) {
 function levelUp (num) {
 	document.getElementById('level').style = "color: red; font-size: 72px;";
 	document.getElementById('level').innerHTML = num;
+<<<<<<< HEAD
 	alert(document.getElementById('level').style.innerHTML);
 	
+=======
+  addMonster(1);
+>>>>>>> cafc5bce54b49debc37297c5ecd1eb6eddf46f2a
 }
