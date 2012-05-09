@@ -23,14 +23,15 @@ function remove ( id ) {
 function addPoints ( ) {
   score = parseInt(document.getElementById("points").innerHTML);
   level = document.getElementById("level").innerHTML;
-  points = score + 1;
-	if(points%(points/2) == 0) {
+  points = score + 10;
+	if(points % 100 == 0) { // co 100 zabitych nowy level
 		levelUp(parseInt(level) + 1);
 	}
   document.getElementById('points').innerHTML = points;
 }
 function levelUp (num) {
 	document.getElementById('level').innerHTML = num;
+  
   addMonster(1);
 }
 /* Sample achievment system */
