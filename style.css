@@ -9,7 +9,7 @@ a { color: orange; text-decoration: none; }
 #lifes { display: inline; float: left; margin-left: 5px; width: 32px; height: 32px; background: url('images/heart.png') repeat-x; }
 #version { display: inline; margin-right: 5px; float: right; }
 #sound { display: inline; float: right; width: 32px; height: 32px; }
-#level { display: block;  visibility: hidden; color: white; font-size: 72px; text-align: center; }
+#level { display: block; color: white; font-size: 72px; text-align: center; }
 
 /* Monsters */
 .husky { width: 30px; height: 51px; position: absolute; background: url('monsters/husky.gif') no-repeat; -webkit-animation: monsterMove 15s infinite linear; -moz-animation: monsterMove 15s infinite linear; }
