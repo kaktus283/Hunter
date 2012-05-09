@@ -23,7 +23,7 @@ function remove ( id ) {
 function addPoints ( ) {
   score = parseInt(document.getElementById("points").innerHTML);
   level = document.getElementById("level").innerHTML;
-  points = score + 1;
+  points = score + 10;
   if(points == 10 || points == 20 || points == 30) {
     addMonster(1);
     
@@ -34,5 +34,8 @@ function addPoints ( ) {
   document.getElementById('points').innerHTML = points;
 }
 function levelUp (num) {
+	document.getElementById('level').style = "color: red; font-size: 72px;";
 	document.getElementById('level').innerHTML = num;
+	alert(document.getElementById('level').style.innerHTML);
+	
 }
