@@ -1,6 +1,6 @@
 var a = 0;
 var b = 0;
-var version = 'Developer Preview 0.3.6';
+var version = 'Developer Preview 0.3.7';
 function addMonster (value) {
   for(var i = 1; i <= value; i++) {
     monster = document.createElement('div');
@@ -23,13 +23,14 @@ function remove ( id ) {
 function addPoints ( ) {
   score = parseInt(document.getElementById("points").innerHTML);
   level = document.getElementById("level").innerHTML;
-  points = score + 1;
-	if(points%(points/2) == 0) { // co 100 zabitych nowy level, mozna potem nieregularnie dac
+  points = score + 10;
+	if(points % 100 == 0) { // co 2^2 zabitych nowy level
 		levelUp(parseInt(level) + 1);
 	}
   document.getElementById('points').innerHTML = points;
 }
 function levelUp (num) {
 	document.getElementById('level').innerHTML = num;
+  
   addMonster(1);
 }
