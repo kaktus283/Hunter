@@ -26,7 +26,13 @@ function addPoints ( ) {
   points = score + 1;
   if(points == 10 || points == 20 || points == 30) {
     addMonster(1);
-    //document.getElementById('level').innerHTML = '2';
+    
   }
+	if(points%100 == 0){ // co 100 zabitych nowy level, mozna potem nieregularnie dac
+		levelUp(parseInt(level) + 1);
+	}
   document.getElementById('points').innerHTML = points;
+}
+function levelUp (num) {
+	document.getElementById('level').innerHTML = num;
 }
