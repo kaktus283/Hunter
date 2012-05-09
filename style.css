@@ -9,29 +9,35 @@ a { color: orange; text-decoration: none; }
 #lifes { display: inline; float: left; margin-left: 5px; width: 32px; height: 32px; background: url('images/heart.png') repeat-x; }
 #version { display: inline; margin-right: 5px; float: right; }
 #sound { display: inline; float: right; width: 32px; height: 32px; }
-#level { display: block;  visibility: hidden; color: white; font-size: 72px; text-align: center; }
+#level { display: block;   color: white; font-size: 72px; text-align: center; opacity: 0; -webkit-animation: show_level 2s; }
 
 /* Monsters */
-.husky { width: 30px; height: 51px; position: absolute; background: url('monsters/husky.gif') no-repeat; -webkit-animation: monsterMove 15s infinite linear; -moz-animation: monsterMove 15s infinite linear; }
-.squirrel { width: 64px; height: 64px; position: absolute; background: url('monsters/squirrel.gif') no-repeat; -webkit-animation: monsterMove 15s infinite; }
-.troll { width: 38px; height: 32px; position: absolute; background: url('monsters/troll.gif') no-repeat; -webkit-animation: monsterMove 10s infinite; }
-.islandtroll { width: 42px; height: 32px; position: absolute; background: url('monsters/islandtroll.gif') no-repeat; -webkit-animation: monsterMove 10s infinite; }
+.husky { width: 30px; height: 51px; position: absolute; background: url('monsters/husky.gif') no-repeat; -webkit-animation: monster_move 15s infinite linear; -moz-animation: monster_move 15s infinite linear; }
+.squirrel { width: 64px; height: 64px; position: absolute; background: url('monsters/squirrel.gif') no-repeat; -webkit-animation: monster_move 15s infinite; }
+.troll { width: 38px; height: 32px; position: absolute; background: url('monsters/troll.gif') no-repeat; -webkit-animation: monster_move 10s infinite; }
+.islandtroll { width: 42px; height: 32px; position: absolute; background: url('monsters/islandtroll.gif') no-repeat; -webkit-animation: monster_move 10s infinite; }
 
 /* Controls */
 .mute { display: inline; width: 32px; height: 32px; background: url('images/mute.png') no-repeat; }
 .unmute { display: inline; width: 32px; height: 32px; background: url('images/unmute.png') no-repeat; }
 
 /* Will be replaced soon */
-@-webkit-keyframes monsterMove {
-  to {
-    top: 90%;
-  }
+@-webkit-keyframes monster_move {
+  to { top: 90%; }
+}
+@-webkit-keyframes show_level {
+  from { opacity:0; }
+  50% { opacity: 1; }
+  to { opacity: 0; }
 }
 /* Developers mikerow99 Mozilla */
-@-moz-keyframes monsterMove {
-  to {
-    top: 90%;
-  }
+@-moz-keyframes monster_move {
+  to { top: 90%; }
+}
+@-moz-keyframes monster_move {
+  from { opacity:0; }
+  50% { opacity: 1; }
+  to { opacity: 0; }
 }
 
 /* Splash */
