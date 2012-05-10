@@ -1,6 +1,6 @@
 var a = 0;
 var b = 0;
-var version = 'Developer Preview 0.3.8';
+var version = 'Developer Preview 0.3.9';
 function addMonster (value) {
   for(var i = 1; i <= value; i++) {
     monster = document.createElement('div');
@@ -34,8 +34,8 @@ function levelUp (num) {
   
   addMonster(1);
 }
-/* Sample achievment system */
-function achievment( level, points ) {
+/* Sample achievement system */
+function achievement( level, points ) {
   if( points >= 100 ) {
     //Killer I
   } else if( points >= 200 ) {
@@ -43,6 +43,7 @@ function achievment( level, points ) {
   } else if( points >= 300 ) {
     //Killer III
   }
+  // number of all kills, not only in single game
   if( level >= 1) {
     //Farmer I
   } else if( level >= 2 ) {
@@ -50,4 +51,29 @@ function achievment( level, points ) {
   } else if( level >= 3 ) {
     //Farmer III
   }
+  // number of clicks
+  // length of playing
+	var timePlayed = 0;
+	if ( lengthOfPlaying >= 60 * 60 * 1000 ){
+	// Timer  
+	}else if( lengthOfPlaying >= 2 * 60 * 60 * 1000 ){
+	// Super Timer	
+	}else if(lengthOfPlaying >= 5 * 60 * 60 * 1000){
+	// Hiper Timer	
+	}
+	if(creditsVisited){
+	// Curiosity Badge
+	}
+	if(timesPlayed < 5){
+	// Gamer
+	}else if(timesPlayed < 25){
+	// Pro Gamer	
+	}else if(timesPlayed < 50){
+	// Uber Gamer	
+	}
+}
+function backToMenu(e){
+	if(e.keyCode == "27"){
+			history.go(-1);
+	}
 }
